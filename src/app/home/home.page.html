@@ -1,20 +1,454 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      WhatsApp
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="presentPopover($event)">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
+<ion-tabs>
+  <!-- Pestaña de "Chats" -->
+  <ion-tab tab="chats">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Chats</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content>
+      <ion-list>
+        <!-- Ejemplo de chat en la lista -->
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Juan Pérez</h2>
+            <p>¿Cómo estás?</p>
+          </ion-label>
+          <ion-note slot="end">
+            2:30 PM
+          </ion-note>
+        </ion-item>
+        <!-- Otro chat -->
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>María García</h2>
+            <p>Nos vemos mañana!</p>
+          </ion-label>
+          <ion-note slot="end">
+            1:45 PM
+          </ion-note>
+        </ion-item>
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Juan Pérez</h2>
+            <p>¿Cómo estás?</p>
+          </ion-label>
+          <ion-note slot="end">2:30 PM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>María García</h2>
+            <p>Nos vemos mañana!</p>
+          </ion-label>
+          <ion-note slot="end">1:45 PM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Ana Sánchez</h2>
+            <p>¿Nos reunimos esta tarde?</p>
+          </ion-label>
+          <ion-note slot="end">12:30 PM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Carlos Fernández</h2>
+            <p>Revisé tu proyecto, todo bien</p>
+          </ion-label>
+          <ion-note slot="end">11:00 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Lucía Martínez</h2>
+            <p>Me avisas si necesitas algo</p>
+          </ion-label>
+          <ion-note slot="end">10:15 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Pedro Rodríguez</h2>
+            <p>¿Has visto el último artículo?</p>
+          </ion-label>
+          <ion-note slot="end">9:30 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Elena López</h2>
+            <p>Te llamo más tarde</p>
+          </ion-label>
+          <ion-note slot="end">9:00 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>José Martínez</h2>
+            <p>Reunión a las 4</p>
+          </ion-label>
+          <ion-note slot="end">8:30 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Marina Gómez</h2>
+            <p>Hoy es el último día para enviar</p>
+          </ion-label>
+          <ion-note slot="end">8:00 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>David Ruiz</h2>
+            <p>¡Feliz cumpleaños!</p>
+          </ion-label>
+          <ion-note slot="end">7:45 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>María López</h2>
+            <p>¿Vas a la reunión?</p>
+          </ion-label>
+          <ion-note slot="end">7:15 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Fernando Castro</h2>
+            <p>Reunión a las 3:30</p>
+          </ion-label>
+          <ion-note slot="end">6:00 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Susana Pérez</h2>
+            <p>Acabo de enviarte un mensaje</p>
+          </ion-label>
+          <ion-note slot="end">5:45 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Raúl Díaz</h2>
+            <p>¡Te llamo después!</p>
+          </ion-label>
+          <ion-note slot="end">5:00 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Claudia Gómez</h2>
+            <p>¿Nos vemos esta noche?</p>
+          </ion-label>
+          <ion-note slot="end">4:30 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Tomás Sánchez</h2>
+            <p>Revisemos esto juntos</p>
+          </ion-label>
+          <ion-note slot="end">4:00 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Isabel Herrera</h2>
+            <p>Nos vemos a las 7</p>
+          </ion-label>
+          <ion-note slot="end">3:30 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Roberto Martínez</h2>
+            <p>Confirmado para las 4</p>
+          </ion-label>
+          <ion-note slot="end">3:00 AM</ion-note>
+        </ion-item>
+  
+        <ion-item button>
+          <ion-avatar slot="start">
+            <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+          </ion-avatar>
+          <ion-label>
+            <h2>Laura Torres</h2>
+            <p>¡Todo listo para la presentación!</p>
+          </ion-label>
+          <ion-note slot="end">2:30 AM</ion-note>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-tab>
+
+  <!-- Pestaña de "Novedades" -->
+<ion-tab tab="novedades">
+  <ion-header>
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title>Novedades</ion-title>
     </ion-toolbar>
   </ion-header>
+  <ion-content>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
-</ion-content>
+    <!-- Sección de Estados -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Estados</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <!-- Estado 1 -->
+          <ion-item button>
+            <ion-avatar slot="start">
+              <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h2>Juan Pérez</h2>
+              <p>Hola, estoy fuera por un momento</p>
+            </ion-label>
+            <ion-note slot="end">Hace 1 hora</ion-note>
+          </ion-item>
+
+          <!-- Estado 2 -->
+          <ion-item button>
+            <ion-avatar slot="start">
+              <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h2>María García</h2>
+              <p>Tomando un descanso 😊</p>
+            </ion-label>
+            <ion-note slot="end">Hace 3 horas</ion-note>
+          </ion-item>
+
+          <!-- Estado 3 -->
+          <ion-item button>
+            <ion-avatar slot="start">
+              <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h2>Ana Sánchez</h2>
+              <p>¡Nos vemos en la reunión!</p>
+            </ion-label>
+            <ion-note slot="end">Hace 6 horas</ion-note>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Sección de Canales -->
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Canales</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <!-- Canal 1 -->
+          <ion-item button>
+            <ion-avatar slot="start">
+              <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h2>Noticias de Tecnología</h2>
+              <p>Últimas noticias sobre tecnología y gadgets</p>
+            </ion-label>
+            <ion-note slot="end">250 miembros</ion-note>
+          </ion-item>
+
+          <!-- Canal 2 -->
+          <ion-item button>
+            <ion-avatar slot="start">
+              <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h2>Deportes al Día</h2>
+              <p>Entérate de los resultados de fútbol y más</p>
+            </ion-label>
+            <ion-note slot="end">1500 miembros</ion-note>
+          </ion-item>
+
+          <!-- Canal 3 -->
+          <ion-item button>
+            <ion-avatar slot="start">
+              <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+            </ion-avatar>
+            <ion-label>
+              <h2>Cultura y Entretenimiento</h2>
+              <p>Recomendaciones de libros, películas y más</p>
+            </ion-label>
+            <ion-note slot="end">800 miembros</ion-note>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-content>
+</ion-tab>
+
+
+ <!-- Pestaña de "Comunidades" -->
+<ion-tab tab="comunidades">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Comunidades</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <!-- Comunidad 1 -->
+      <ion-item button>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Comunidad de Programadores</h2>
+          <p>100 miembros</p>
+        </ion-label>
+      </ion-item>
+      <!-- Comunidad 2 -->
+      <ion-item button>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Comunidad de Diseñadores</h2>
+          <p>250 miembros</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-tab>
+
+
+  <!-- Pestaña de "Llamadas" -->
+<ion-tab tab="llamadas">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Llamadas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label>
+          <h2>Juan Pérez</h2>
+          <p>Llamada perdida</p>
+        </ion-label>
+        <ion-note slot="end">Hace 1 hora</ion-note>
+      </ion-item>
+      <ion-item>
+        <ion-avatar slot="start">
+          <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg" />
+        </ion-avatar>
+        <ion-label>
+          <h2>María García</h2>
+          <p>Llamada realizada</p>
+        </ion-label>
+        <ion-note slot="end">Hace 2 horas</ion-note>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-tab>
+
+
+  <!-- Barra de pestañas inferior -->
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="chats">
+      <ion-icon name="chatbubble-ellipses"></ion-icon>
+      Chats
+    </ion-tab-button>
+    <ion-tab-button tab="novedades">
+      <ion-icon name="newspaper"></ion-icon>
+      Novedades
+    </ion-tab-button>
+    <ion-tab-button tab="comunidades">
+      <ion-icon name="people"></ion-icon>
+      Comunidades
+    </ion-tab-button>
+    <ion-tab-button tab="llamadas">
+      <ion-icon name="call"></ion-icon>
+      Llamadas
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

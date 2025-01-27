@@ -1,0 +1,27 @@
+<ion-list>
+  <ion-item button (click)="newGroup()">
+    <ion-icon slot="start" name="people"></ion-icon>
+    <ion-label>Nuevo Grupo</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="newBroadcast()">
+    <ion-icon slot="start" name="megaphone"></ion-icon>
+    <ion-label>Nueva Difusión</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="linkedDevices()">
+    <ion-icon slot="start" name="devices"></ion-icon>
+    <ion-label>Dispositivos Vinculados</ion-label>
+  </ion-item>
+
+  <ion-item button (click)="starredMessages()">
+    <ion-icon slot="start" name="star"></ion-icon>
+    <ion-label>Mensajes Destacados</ion-label>
+  </ion-item>
+
+  <ion-item button [routerLink]="['/settings']">
+  <ion-icon slot="start" name="settings"></ion-icon>
+  <ion-label>Ajustes</ion-label>
+</ion-item>
+
+</ion-list>
